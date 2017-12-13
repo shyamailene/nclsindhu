@@ -1,0 +1,11 @@
+version: '2'
+services:
+    nclsindhu-postgresql:
+        image: postgres:9.6.5
+        # volumes:
+        #     - ~/volumes/jhipster/nclsindhu/postgresql/:/var/lib/postgresql/data/
+        environment:
+            - POSTGRES_USER=nclsindhu
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432

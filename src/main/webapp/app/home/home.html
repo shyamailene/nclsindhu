@@ -1,41 +1,70 @@
 <div ng-cloak>
-    <div class="row">
-        <div class="col-md-4">
-            <span class="hipster img-responsive img-rounded"></span>
-        </div>
-        <div class="col-md-8">
-            <h1 data-translate="home.title">Welcome, Java Hipster!</h1>
-            <p class="lead" data-translate="home.subtitle">This is your homepage</p>
-
-            <div ng-switch="vm.isAuthenticated()">
-                <div class="alert alert-success" ng-switch-when="true" data-translate="home.logged.message" translate-values="{username: '{{vm.account.login}}'}">
-                    You are logged in as user "{{vm.account.login}}".
-                </div>
-
-                <div class="alert alert-warning" ng-switch-when="false" data-translate="global.messages.info.authenticated" translate-compile>
-                    If you want to <a class="alert-link" href="" ng-click="vm.login()">sign in</a>, you can try the default accounts:<br/>- Administrator (login="admin" and password="admin") <br/>- User (login="user" and password="user").
-                </div>
-
-                <div class="alert alert-warning" ng-switch-when="false" data-translate="global.messages.info.register" translate-compile>
-                    You don't have an account yet? <a class="alert-link" ui-sref="register">Register a new account</a>
+    <div ng-switch="vm.isAuthenticated()">
+        <div ng-switch-when="true">
+            <div class="row" align="center">
+                <div class="col-md-12">
+                    <table class="jh-table table table-striped">
+                        <thead>
+                        <tr>
+                            <th colspan="2" class="text-center">Contact Information</th>
+                        </tr>
+                        <tr>
+                            <th><span data-translate="home.contactdetails">Name</span></th>
+                            <th><span data-translate="home.contactnumber">Contact</span></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Watchman(Laxman)</td>
+                            <td>7997999923</td>
+                        </tr>
+                        <tr>
+                            <td>Electrician(Sai)</td>
+                            <td>8688572754</td>
+                        </tr>
+                        <tr>
+                            <td>Internet & Dish(Phani)</td>
+                            <td>9701856641</td>
+                        </tr>
+                        <tr>
+                            <td>Iron Dress(Venkat)</td>
+                            <td>8686257778</td>
+                        </tr>
+                        <tr>
+                            <td>IFB Local Customer care(Gopi Krishna)</td>
+                            <td>9951963831</td>
+                        </tr>
+                        <tr>
+                            <td>Shobha Decors(Mukesh)</td>
+                            <td>9030262264</td>
+                        </tr>
+                        <tr>
+                            <td>Kirana & Milk - Jai Bhavani(Mukesh)</td>
+                            <td>9394001381</td>
+                        </tr>
+                        <tr>
+                            <td>Samsung AC Repair(Ramkumar)</td>
+                            <td>9248649367</td>
+                        </tr>
+                        <tr>
+                            <td>Carpenter(Venkatesh)</td>
+                            <td>9542004056</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-
-            <p data-translate="home.question">
-                If you have any question on JHipster:
-            </p>
-
-            <ul>
-                <li><a href="http://www.jhipster.tech/" target="_blank" rel="noopener" data-translate="home.link.homepage">JHipster homepage</a></li>
-                <li><a href="http://stackoverflow.com/tags/jhipster/info" target="_blank" rel="noopener" data-translate="home.link.stackoverflow">JHipster on Stack Overflow</a></li>
-                <li><a href="https://github.com/jhipster/generator-jhipster/issues?state=open" target="_blank" rel="noopener" data-translate="home.link.bugtracker">JHipster bug tracker</a></li>
-                <li><a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener" data-translate="home.link.chat">JHipster public chat room</a></li>
-                <li><a href="https://twitter.com/java_hipster" target="_blank" rel="noopener" data-translate="home.link.follow">follow @java_hipster on Twitter</a></li>
-            </ul>
-
-            <p>
-             <span data-translate="home.like">If you like JHipster, don't forget to give us a star on </span>&nbsp;<a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener" data-translate="home.github">GitHub</a>!
-            </p>
         </div>
+        <div class="col-md-12 hipster " ng-switch-when="false">
+            <span class="img-responsive img-rounded">
+
+            </span>
+        </div>
+
+        <div class="alert alert-warning" ng-switch-when="false" data-translate="global.messages.info.register" translate-compile>
+            You don't have an account yet? <a class="alert-link" ui-sref="register">Register a new account</a>
+        </div>
+
     </div>
+
 </div>

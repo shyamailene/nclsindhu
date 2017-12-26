@@ -1,0 +1,23 @@
+{
+    "nclsindhuApp": {
+        "block" : {
+            "home": {
+                "title": "Blocks",
+                "createLabel": "नया Block बनाएँ",
+                "createOrEditLabel": "Block बनाएँ या संपादित करें",
+                "search": "Block खोजें"
+            },
+            "created": "एक नया Block [identifier: {{ param }}] तैयार है",
+            "updated": "एक Block [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Block [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Block [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Block"
+            },
+            "blockid": "Blockid",
+            "blockdesc": "Blockdesc"
+        }
+    }
+}

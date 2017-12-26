@@ -1,5 +1,6 @@
 package com.ncl.sindhu.service;
 
+import com.ncl.sindhu.domain.Issue;
 import com.ncl.sindhu.domain.User;
 
 import io.github.jhipster.config.JHipsterProperties;
@@ -30,6 +31,8 @@ public class MailService {
     private final Logger log = LoggerFactory.getLogger(MailService.class);
 
     private static final String USER = "user";
+
+    private static final String TRAC = "trac";
 
     private static final String BASE_URL = "baseUrl";
 
@@ -115,5 +118,52 @@ public class MailService {
         String content = templateEngine.process("socialRegistrationValidationEmail", context);
         String subject = messageSource.getMessage("email.social.registration.title", null, locale);
         sendEmail(user.getEmail(), subject, content, false, true);
+    }
+
+    @Async
+    public void sendEmail(User user,Issue trac) {
+        log.debug("Sending email to '{}'");
+        sendEmail(user,"issueEmail", "email.trac.title", trac);
+    }
+
+    @Async
+    public void sendEmail(User user, String templateName, String titleKey, Issue trac) {
+        Locale locale = Locale.forLanguageTag(user.getLangKey());
+        Context context = new Context(locale);
+        context.setVariable(USER, user);
+        context.setVariable(TRAC, trac);
+        String content = templateEngine.process(templateName, context);
+        System.out.println("test"+content);
+        String subject = messageSource.getMessage(titleKey, null, locale);
+        if(user.getEmail()!=null&&user.getEmail().trim().length()!=0)
+            sendEmailWithCC("shyamraoa@gmail.com", subject, content, false, true,user.getEmail());
+        else
+            sendEmail("shyamraoa@gmail.com", subject, content, false, true);
+
+    }
+
+    @Async
+    public void sendEmailWithCC(String to, String subject, String content, boolean isMultipart, boolean isHtml,String cc) {
+        log.debug("Send email[multipart '{}' and html '{}'] to '{}' with subject '{}' and content={}",
+            isMultipart, isHtml, to, subject, content);
+
+        // Prepare message using a Spring helper
+        MimeMessage mimeMessage = javaMailSender.createMimeMessage();
+        try {
+            MimeMessageHelper message = new MimeMessageHelper(mimeMessage, isMultipart, CharEncoding.UTF_8);
+            message.setTo(to);
+            message.setCc(cc);
+            message.setFrom(jHipsterProperties.getMail().getFrom());
+            message.setSubject(subject);
+            message.setText(content, isHtml);
+            javaMailSender.send(mimeMessage);
+            log.debug("Sent email to User '{}'", to);
+        } catch (Exception e) {
+            if (log.isDebugEnabled()) {
+                log.warn("Email could not be sent to user '{}'", to, e);
+            } else {
+                log.warn("Email could not be sent to user '{}': {}", to, e.getMessage());
+            }
+        }
     }
 }

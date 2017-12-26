@@ -1,0 +1,30 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "block",
+            "otherEntityName": "block",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "blockdesc"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "flatid",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "flatdesc",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171214123212",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "flat",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

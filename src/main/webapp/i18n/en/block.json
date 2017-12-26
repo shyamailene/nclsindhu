@@ -1,0 +1,23 @@
+{
+    "nclsindhuApp": {
+        "block" : {
+            "home": {
+                "title": "Blocks",
+                "createLabel": "Create a new Block",
+                "createOrEditLabel": "Create or edit a Block",
+                "search": "Search for Block"
+            },
+            "created": "A new Block is created with identifier {{ param }}",
+            "updated": "A Block is updated with identifier {{ param }}",
+            "deleted": "A Block is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Block {{ id }}?"
+            },
+            "detail": {
+                "title": "Block"
+            },
+            "blockid": "Blockid",
+            "blockdesc": "Blockdesc"
+        }
+    }
+}

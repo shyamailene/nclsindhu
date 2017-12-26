@@ -1,0 +1,24 @@
+{
+    "nclsindhuApp": {
+        "flat" : {
+            "home": {
+                "title": "Flats",
+                "createLabel": "नया Flat बनाएँ",
+                "createOrEditLabel": "Flat बनाएँ या संपादित करें",
+                "search": "Flat खोजें"
+            },
+            "created": "एक नया Flat [identifier: {{ param }}] तैयार है",
+            "updated": "एक Flat [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Flat [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Flat [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Flat"
+            },
+            "flatid": "Flatid",
+            "flatdesc": "Flatdesc",
+            "block": "Block"
+        }
+    }
+}

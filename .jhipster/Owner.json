@@ -1,0 +1,46 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "flat",
+            "otherEntityName": "flat",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "flatdesc"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "mobile",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "carlocation",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "intercom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "carnumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bikenumber",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171214130807",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "owner",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

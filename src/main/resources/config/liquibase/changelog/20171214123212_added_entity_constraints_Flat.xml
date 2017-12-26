@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Flat.
+    -->
+    <changeSet id="20171214123212-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="block_id"
+                                 baseTableName="flat"
+                                 constraintName="fk_flat_block_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="block"/>
+
+    </changeSet>
+</databaseChangeLog>

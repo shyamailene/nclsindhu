@@ -1,0 +1,28 @@
+{
+    "nclsindhuApp": {
+        "owner" : {
+            "home": {
+                "title": "Owners",
+                "createLabel": "Create a new Owner",
+                "createOrEditLabel": "Create or edit a Owner",
+                "search": "Search for Owner"
+            },
+            "created": "A new Owner is created with identifier {{ param }}",
+            "updated": "A Owner is updated with identifier {{ param }}",
+            "deleted": "A Owner is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Owner {{ id }}?"
+            },
+            "detail": {
+                "title": "Owner"
+            },
+            "name": "Name",
+            "mobile": "Mobile",
+            "carlocation": "Carlocation",
+            "intercom": "Intercom",
+            "carnumber": "Carnumber",
+            "bikenumber": "Bikenumber",
+            "flat": "Flat"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "blockid",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "blockdesc",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171214122217",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "block",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

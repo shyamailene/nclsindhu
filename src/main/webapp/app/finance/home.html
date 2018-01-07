@@ -1,0 +1,70 @@
+<div ng-cloak>
+    <div ng-switch="vm.isAuthenticated()">
+        <div ng-switch-when="true">
+            <div class="row" align="center">
+                <div class="col-md-12">
+                    <table class="jh-table table table-striped">
+                        <thead>
+                        <tr>
+                            <th colspan="4" class="text-center">Financial Information</th>
+                        </tr>
+                        <tr>
+                            <th width="30%"><span data-translate="home.expenditure">Expenditure</span></th>
+                            <th width="20%"></th>
+                            <th width="30%"><span data-translate="home.collected">Collected</span></th>
+                            <th width="20%"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Details</td>
+                            <td>Amount</td>
+                            <td>Details</td>
+                            <td>Amount</td>
+                        </tr>
+                        <tr>
+                            <td>Diwali Expenses(Lights+Sweets and Snacks)</td>
+                            <td align="right">Rs. 12200.00</td>
+                            <td>E-Block</td>
+                            <td align="right">Rs. 40500.00</td>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                            <td>Ganesh Utsav Expenses</td>
+                            <td align="right">Rs. 53662.00</td>
+                            <td>F-Block</td>
+                            <td align="right">Rs. 24000.00</td>
+                        </tr>
+                        <tr>
+                            <td></td><td></td>
+                            <td>Laddu Auction</td>
+                            <td align="right">Rs. 10100.00</td>
+                        </tr>
+                        <tr>
+                            <td></td><td></td>
+                            <td>Hundi Collection</td>
+                            <td align="right">Rs. 3123.00</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td align="right">Rs. 65862.00</td>
+                            <td>Total</td>
+                            <td align="right">Rs. 77723.00</td>
+                        </tr>
+                        <tr>
+                            <td></td><td>Balance</td>
+                            <td>Rs. 11861.00</td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="alert alert-warning" ng-switch-when="false" data-translate="global.messages.info.register" translate-compile>
+            You don't have an account yet? <a class="alert-link" ui-sref="register">Register a new account</a>
+        </div>
+
+    </div>
+</div>

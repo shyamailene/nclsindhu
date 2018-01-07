@@ -1,0 +1,28 @@
+{
+    "nclsindhuApp": {
+        "owner" : {
+            "home": {
+                "title": "Owners",
+                "createLabel": "नया Owner बनाएँ",
+                "createOrEditLabel": "Owner बनाएँ या संपादित करें",
+                "search": "Owner खोजें"
+            },
+            "created": "एक नया Owner [identifier: {{ param }}] तैयार है",
+            "updated": "एक Owner [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Owner [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Owner [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Owner"
+            },
+            "name": "Name",
+            "mobile": "Mobile",
+            "carlocation": "Carlocation",
+            "intercom": "Intercom",
+            "carnumber": "Carnumber",
+            "bikenumber": "Bikenumber",
+            "flat": "Flat"
+        }
+    }
+}

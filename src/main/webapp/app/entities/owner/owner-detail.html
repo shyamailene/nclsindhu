@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span data-translate="nclsindhuApp.owner.detail.title">Owner</span> {{vm.owner.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="nclsindhuApp.owner.name">Name</span></dt>
+        <dd>
+            <span>{{vm.owner.name}}</span>
+        </dd>
+        <dt><span data-translate="nclsindhuApp.owner.mobile">Mobile</span></dt>
+        <dd>
+            <span>{{vm.owner.mobile}}</span>
+        </dd>
+        <dt><span data-translate="nclsindhuApp.owner.carlocation">Carlocation</span></dt>
+        <dd>
+            <span>{{vm.owner.carlocation}}</span>
+        </dd>
+        <dt><span data-translate="nclsindhuApp.owner.intercom">Intercom</span></dt>
+        <dd>
+            <span>{{vm.owner.intercom}}</span>
+        </dd>
+        <dt><span data-translate="nclsindhuApp.owner.carnumber">Carnumber</span></dt>
+        <dd>
+            <span>{{vm.owner.carnumber}}</span>
+        </dd>
+        <dt><span data-translate="nclsindhuApp.owner.bikenumber">Bikenumber</span></dt>
+        <dd>
+            <span>{{vm.owner.bikenumber}}</span>
+        </dd>
+        <dt><span data-translate="nclsindhuApp.owner.flat">Flat</span></dt>
+        <dd>
+            <a ui-sref="flat-detail({id:vm.owner.flat.id})">{{vm.owner.flat.flatdesc}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="owner-detail.edit({id:vm.owner.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,19 @@
+version: '2'
+services:
+    nclsindhu-app:
+        image: nclsindhu
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://nclsindhu-postgresql:5432/nclsindhu
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+            - SPRING_DATA_ELASTICSEARCH_CLUSTER_NODES=nclsindhu-elasticsearch:9300
+        ports:
+            - 8080:8080
+    nclsindhu-postgresql:
+        extends:
+            file: postgresql.yml
+            service: nclsindhu-postgresql
+    nclsindhu-elasticsearch:
+        extends:
+            file: elasticsearch.yml
+            service: nclsindhu-elasticsearch

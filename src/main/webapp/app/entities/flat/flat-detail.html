@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="nclsindhuApp.flat.detail.title">Flat</span> {{vm.flat.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="nclsindhuApp.flat.flatid">Flatid</span></dt>
+        <dd>
+            <span>{{vm.flat.flatid}}</span>
+        </dd>
+        <dt><span data-translate="nclsindhuApp.flat.flatdesc">Flatdesc</span></dt>
+        <dd>
+            <span>{{vm.flat.flatdesc}}</span>
+        </dd>
+        <dt><span data-translate="nclsindhuApp.flat.block">Block</span></dt>
+        <dd>
+            <a ui-sref="block-detail({id:vm.flat.block.id})">{{vm.flat.block.blockdesc}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="flat-detail.edit({id:vm.flat.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span data-translate="nclsindhuApp.issue.detail.title">Issue</span> {{vm.issue.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="nclsindhuApp.issue.subject">Subject</span></dt>
+        <dd>
+            <span>{{vm.issue.subject}}</span>
+        </dd>
+        <dt><span data-translate="nclsindhuApp.issue.type">Type</span></dt>
+        <dd>
+            <span>{{vm.issue.type}}</span>
+        </dd>
+        <dt><span data-translate="nclsindhuApp.issue.description">Description</span></dt>
+        <dd>
+            <span>{{vm.issue.description}}</span>
+        </dd>
+        <dt><span data-translate="nclsindhuApp.issue.status">Status</span></dt>
+        <dd>
+            <span>{{vm.issue.status}}</span>
+        </dd>
+        <dt><span data-translate="nclsindhuApp.issue.user">User</span></dt>
+        <dd>
+            {{vm.issue.user.login}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="issue-detail.edit({id:vm.issue.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

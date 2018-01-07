@@ -1,0 +1,50 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myFlatLabel" data-translate="nclsindhuApp.flat.home.createOrEditLabel">Create or edit a Flat</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.flat.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.flat.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="nclsindhuApp.flat.flatid" for="field_flatid">Flatid</label>
+            <input type="text" class="form-control" name="flatid" id="field_flatid"
+                    ng-model="vm.flat.flatid"
+                    required/>
+            <div ng-show="editForm.flatid.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.flatid.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="nclsindhuApp.flat.flatdesc" for="field_flatdesc">Flatdesc</label>
+            <input type="text" class="form-control" name="flatdesc" id="field_flatdesc"
+                    ng-model="vm.flat.flatdesc"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="nclsindhuApp.flat.block" for="field_block">Block</label>
+            <select class="form-control" id="field_block" name="block" ng-model="vm.flat.block" ng-options="block as block.blockdesc for block in vm.blocks track by block.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,4 +1,5 @@
 # nclsindhu
+<<<<<<< HEAD
 This application was generated using JHipster 4.12.0, you can find documentation and help at [http://www.jhipster.tech/documentation-archive/v4.12.0](http://www.jhipster.tech/documentation-archive/v4.12.0).
 
 ## Development
@@ -109,3 +110,20 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 [Protractor]: https://angular.github.io/protractor/
 [Leaflet]: http://leafletjs.com/
 [DefinitelyTyped]: http://definitelytyped.org/
+=======
+
+…or create a new repository on the command line
+
+echo "# nclsindhu" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/shyamailene/nclsindhu.git
+git push -u origin master
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/shyamailene/nclsindhu.git
+git push -u origin master
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+>>>>>>> 1f82dd11e05ac43deb7c74978a31aa9a144dd595
